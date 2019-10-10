@@ -1,0 +1,4 @@
+include "router"
+include "api"
+include "services:say-hello"
+include "services:say-goodbye"

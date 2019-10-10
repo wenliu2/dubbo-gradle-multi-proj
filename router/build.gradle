@@ -1,0 +1,20 @@
+//println "this is project: $project"
+
+/*
+hello {
+  println "router yes - 1"
+  doLast {
+    println "router yes."
+  }
+}
+*/
+bootJar {
+  mainClassName = 'com.ebay.wenliu2.dubbo.router.RouterApp'
+}
+
+dependencies {
+  compile "org.springframework.boot:spring-boot-starter-web:${springbootVersion}"
+  api project(":api")
+}
+
+

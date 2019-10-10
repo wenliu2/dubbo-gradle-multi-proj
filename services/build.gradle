@@ -1,0 +1,26 @@
+bootJar {
+  enabled = false
+}
+
+subprojects{
+  dependencies {
+    compile "org.springframework.boot:spring-boot-starter-actuator:$springbootVersion"
+    api project(':api')
+  }
+}
+
+project("say-goodbye") {
+  jar {
+    manifest {
+      attributes 'Main-Class': 'com.ebay.wenliu2.dubbo.services.SayGoodByeApp'
+    }
+  }
+}
+
+project("say-hello") {
+  jar {
+    manifest {
+      attributes 'Main-Class': 'com.ebay.wenliu2.dubbo.services.SayHelloApp'
+    }
+  }
+}
